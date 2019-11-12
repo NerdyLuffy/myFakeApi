@@ -1,0 +1,35 @@
+{
+  "name": "myfakeapi",
+  "version": "1.0.0",
+  "description": "Fake API for Developers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NerdyLuffy/myFakeApi.git"
+  },
+  "keywords": [
+    "Fake API",
+    "API"
+  ],
+  "author": "nerdyLuffy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NerdyLuffy/myFakeApi/issues"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "homepage": "https://github.com/NerdyLuffy/myFakeApi#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.4",
+    "uuid": "^3.3.3"
+  }
+}
