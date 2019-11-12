@@ -5,10 +5,9 @@ module.exports = contactUsValidation;
 async function contactUsValidation(req,res,next)
 {
 	let errors = [];
-
-	if(req.body.firstName,req.body.lastName,req.body.message,req.body.contact)
+	if(req.body)
 	{
-		if(!_.isString(req.body.firstName,req.body.lastName,req.body.message))
+		if(!_.isString(req.body.firstName))
 		{
 			errors.push({
 				"reason":"firstName",
@@ -35,7 +34,7 @@ async function contactUsValidation(req,res,next)
 		{
 			errors.push({
 				"reason":"contact",
-				"errorMessage":"Please provide valid Contact Number."
+				"errorMessage":"Please provide valid Contact number."
 			});
 		}
 		if(errors.length > 0)
@@ -48,12 +47,5 @@ async function contactUsValidation(req,res,next)
 		{
 			return next();
 		}
-	}
-	else
-	{
-		res.status(400).json({
-			"reason":"Fields are missing",
-			"errorMessage":"Please provide all mandatory fields."
-		});
 	}
 }

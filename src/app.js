@@ -9,8 +9,10 @@ app.use(bodyparser.json());
 app.use(morgan("dev"));
 
 
-//Routes 
+//Routes
+const singUpRoutes = require('../routes/singUp/signUp.js'); 
 const contactUsRoute = require('../routes/contactUs/contactUs.js');
 
-app.use('/contactUs', contactUsRoute);
+app.use('/signup',singUpRoutes);
+app.use('/contactus', contactUsRoute);
 module.exports = app
