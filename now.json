@@ -1,11 +1,21 @@
 {
-  "version": 2,
-  "builds": [{ "src": "index.js", "use": "@now/node-server" }],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.js",
-      "methods": ["GET","POST"]
+	"version": 2,
+	"builds": [
+		{ "src": "index.js", "use": "@now/node-server" },
+		{
+			"src": "packages/myFakeApi-docs/package.json",
+			"use": "@now/next@canary"
 		}
-  ]
+	],
+	"routes": [
+		{
+			"src": "/api(.*)",
+			"dest": "/index.js",
+			"methods": ["GET", "POST"]
+		},
+		{
+			"src": "^(.*)$",
+			"dest": "packages/myFakeApi-docs$1"
+		}
+	]
 }

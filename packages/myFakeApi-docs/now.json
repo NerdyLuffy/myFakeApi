@@ -1,0 +1,11 @@
+{
+	"version": 2,
+	"name": "myFakeApi-docs",
+	"scope": "myFakeApi-docs",
+	"routes": [
+		{
+			"src": "/(.*)",
+			"status": 301
+		}
+	]
+}
