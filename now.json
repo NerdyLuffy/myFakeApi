@@ -7,5 +7,22 @@
 			"dest": "/index.js",
 			"methods": ["GET", "POST"]
 		}
+	],
+	"builds": [
+		{
+			"src": "packages/myFakeApi-docs/package.json",
+			"use": "@now/next"
+		}
+	],
+	"name": "myFakeApi-docs",
+	"routes": [
+		{
+			"src": "^(.*)$",
+			"dest": "packages/myFakeApi-docs$1"
+		},
+		{
+			"src": "/*",
+			"status": 301
+		}
 	]
 }
