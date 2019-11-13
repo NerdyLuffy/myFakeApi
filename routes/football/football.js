@@ -18,7 +18,7 @@ footballRoutes.get('/stadiums', async (req, res) => {
 	});
 });
 
-footballRoutes.get('/stadiums/id/:id', async (req, res) => {
+footballRoutes.get('/stadiums/:id', async (req, res) => {
 	let stadiumsData = data.stadiums;
 	res.status(200).json({
 		stadium: stadiumsData.find(stadium => stadium.id == req.params.id)
@@ -40,7 +40,7 @@ footballRoutes.get('/tvchannels', async (req, res) => {
 	});
 });
 
-footballRoutes.get('/tvchannels/id/:id', async (req, res) => {
+footballRoutes.get('/tvchannels/:id', async (req, res) => {
 	let tvchannelsData = data.tvchannels;
 	res.status(200).json({
 		tvchannel: tvchannelsData.find(tvchannel => tvchannel.id == req.params.id)
@@ -64,7 +64,7 @@ footballRoutes.get('/teams', async (req, res) => {
 	});
 });
 
-footballRoutes.get('/teams/id/:id', async (req, res) => {
+footballRoutes.get('/teams/:id', async (req, res) => {
 	let teamsData = data.teams;
 	res.status(200).json({
 		Team: teamsData.find(team => team.id == req.params.id)

@@ -1,6 +1,6 @@
 const express = require('express');
 const loginInRoutes = express.Router();
-const token = require('../../utils/jwt/toekns.js');
+const token = require('../../utils/jwt/tokens.js');
 const validation = require('../../utils/validations/loginValidation.js');
 
 
