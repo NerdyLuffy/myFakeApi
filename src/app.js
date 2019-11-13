@@ -18,6 +18,7 @@ const loginRouter = require('../routes/logIn/logIn.js');
 const sessionRoutes = require('../routes/session.js');
 const contactUsRoute = require('../routes/contactUs/contactUs.js');
 const footballRoutes = require('../routes/football/football.js');
+const carRoutes = require('../routes/cars/cars.js');
 
 app.get('/',(req,res) => {
 	res.sendFile(path.join(__dirname+'../public/index.html'));
@@ -28,5 +29,6 @@ app.use('/api/login', loginRouter);
 app.use('/api/session', sessionRoutes);
 app.use('/api/contactus', contactUsRoute);
 app.use('/api/football', footballRoutes);
+app.use('/api/car',carRoutes);
 
 module.exports = app;
