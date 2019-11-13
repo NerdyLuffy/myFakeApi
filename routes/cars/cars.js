@@ -9,14 +9,14 @@ carRoutes.get('/',async(req,res) => {
 	});
 });
 
-carRoutes.post('/:id',async(req,res) => {
+carRoutes.get('/:id',async(req,res) => {
 	let carId = req.params.id;
 	res.status(200).json({
 		Car: carData.find(car => car.id == carId)
 	});
 });
 
-carRoutes.post('/name/:name',async(req,res) => {
+carRoutes.get('/name/:name',async(req,res) => {
 	let name = req.params.name;
 	if(_.isNil(name))
 	{
@@ -41,7 +41,7 @@ carRoutes.post('/name/:name',async(req,res) => {
 	}
 });
 
-carRoutes.post('/model/:model',async(req,res) => {
+carRoutes.get('/model/:model',async(req,res) => {
 	let model = req.params.model;
 	if(_.isNil(model))
 	{
@@ -66,7 +66,7 @@ carRoutes.post('/model/:model',async(req,res) => {
 	}
 });
 
-carRoutes.post('/color/:color',async(req,res) => {
+carRoutes.get('/color/:color',async(req,res) => {
 	let color = req.params.color;
 	if(_.isNil(color))
 	{
@@ -91,10 +91,10 @@ carRoutes.post('/color/:color',async(req,res) => {
 	}
 });
 
-carRoutes.post('/year/:year',async(req,res) => {
+carRoutes.get('/year/:year',async(req,res) => {
 	let year = req.params.year;
-	let query = req.query.q;
-	console.log(query);
+	let queryString = req.query;
+	let query = Object.values(queryString)[0];
 	if(_.isNil(year))
 	{
 		res.status(400).json({
