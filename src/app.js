@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyparser = require('body-parser');
 const morgan = require('morgan');
-const path = require('path');
+const _ = require('lodash');
 let app = express();
 
 app.use(cors());
@@ -17,6 +17,16 @@ const contactUsRoute = require('../routes/contactUs/contactUs.js');
 const footballRoutes = require('../routes/football/football.js');
 const carRoutes = require('../routes/cars/cars.js');
 const usersRoutes = require('../routes/users/users.js');
+
+
+app.all("/api/*", [
+  (req, res, next) => {
+		let delay = req.body.delay || 0;
+		_.delay(() => {
+			return next();
+		},delay);
+  }
+]);
 
 app.use('/api/signup', singUpRoutes);
 app.use('/api/login', loginRouter);
