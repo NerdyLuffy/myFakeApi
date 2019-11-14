@@ -1,0 +1,42 @@
+{
+	"name": "myFakeApi-docs",
+	"author": "Angad Gupta",
+	"license": "MIT",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"now-build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@chakra-ui/core": "^0.4.1",
+		"@emotion/core": "10.0.10",
+		"@emotion/styled": "10.0.11",
+		"@mdx-js/loader": "1.3.1",
+		"@mdx-js/mdx": "^1.1.6",
+		"@mdx-js/react": "^1.1.6",
+		"@next/mdx": "^9.0.3",
+		"@sentry/browser": "^5.9.0",
+		"@sentry/node": "^5.9.0",
+		"@zeit/next-source-maps": "0.0.4-canary.1",
+		"emotion-theming": "10.0.10",
+		"formik": "^1.5.8",
+		"next": "^9.0.7",
+		"next-ga": "^2.3.4",
+		"next-seo": "2.0.0",
+		"prism-react-renderer": "^0.1.7",
+		"prop-types": "^15.7.2",
+		"react": "^16.10.1",
+		"react-dom": "^16.10.1",
+		"react-icons": "^3.7.0",
+		"react-live": "2.2.1",
+		"react-lorem-component": "^0.13.0",
+		"remark-autolink-headings": "5.2.1",
+		"remark-emoji": "2.0.2",
+		"remark-images": "1.0.0",
+		"remark-slug": "5.1.2",
+		"remark-unwrap-images": "1.0.0"
+	}
+}
