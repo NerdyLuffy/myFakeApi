@@ -31,6 +31,9 @@
 		"remark-emoji": "2.0.2",
 		"remark-images": "1.0.0",
 		"remark-slug": "5.1.2",
-		"remark-unwrap-images": "1.0.0"
+		"remark-unwrap-images": "1.0.0",
+		"@sentry/browser": "^5.1.0",
+		"@sentry/node": "^5.7.0",
+		"@zeit/next-source-maps": "0.0.4-canary.1"
 	}
 }
