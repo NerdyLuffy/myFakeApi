@@ -10,7 +10,7 @@ app.use(bodyparser.json());
 app.use(morgan('dev'));
 
 //Routes
-const singUpRoutes = require('../routes/singUp/signUp.js');
+const signUpRoutes = require('../routes/singUp/signUp.js');
 const loginRouter = require('../routes/logIn/logIn.js');
 const sessionRoutes = require('../routes/session.js');
 const contactUsRoute = require('../routes/contactUs/contactUs.js');
@@ -28,7 +28,7 @@ app.all("/api/*", [
   }
 ]);
 
-app.use('/api/signup', singUpRoutes);
+app.use('/api/signup', signUpRoutes);
 app.use('/api/login', loginRouter);
 app.use('/api/session', sessionRoutes);
 app.use('/api/contactus', contactUsRoute);
