@@ -17,16 +17,19 @@ function Navbar() {
 			<Box height="65px"></Box>
 			<Box height="65px" p={3}>
 				<IconButton
-					onClick={toggleColorMode}
-					aria-label="darkmode"
-					icon="sun"
+					aria-label={`Switch to ${
+						colorMode === 'light' ? 'dark' : 'light'
+					} mode`}
 					variant="ghost"
+					color="current"
+					ml="2"
+					fontSize="20px"
+					onClick={toggleColorMode}
+					icon={colorMode === 'light' ? 'moon' : 'sun'}
+					variantColor="teal"
 					isRound="true"
 					size="lg"
-					variantColor="gray"
-				>
-					Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-				</IconButton>
+				/>
 			</Box>
 		</SimpleGrid>
 	);

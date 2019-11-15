@@ -16,11 +16,11 @@ const Hero = () => (
 				<Button
 					size="lg"
 					variant="solid"
-					mt={10}
+					mt={5}
 					fontWeight="medium"
 					borderRadius="6px"
 					boxShadow="lg"
-					variantColor="gray"
+					variantColor="teal"
 				>
 					Get Started
 				</Button>
