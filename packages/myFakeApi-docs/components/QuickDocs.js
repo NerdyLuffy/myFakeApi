@@ -10,7 +10,9 @@ import {
 	Tab,
 	TabPanel
 } from '@chakra-ui/core';
-import Code from './Code.mdx';
+import Car from '../codeblock/Car.mdx';
+import Cars from '../codeblock/Cars.mdx';
+import ComingSoon from '../codeblock/ComingSoon.mdx';
 
 const QuickDocs = () => (
 	<>
@@ -26,6 +28,7 @@ const QuickDocs = () => (
 				<TabList mb="1em">
 					<Tab>List Single Car</Tab>
 					<Tab>List All Cars</Tab>
+					<Tab>More Coming Soon</Tab>
 				</TabList>
 				<TabPanels>
 					<TabPanel>
@@ -36,7 +39,7 @@ const QuickDocs = () => (
 									/api/cars/:id
 								</Text>
 								<Text fontSize="2xl">Response</Text>
-								<Code />
+								<Car />
 							</SimpleGrid>
 						</Box>
 					</TabPanel>
@@ -48,7 +51,19 @@ const QuickDocs = () => (
 									/api/cars
 								</Text>
 								<Text fontSize="2xl">Response</Text>
-								<Code />
+								<Cars />
+							</SimpleGrid>
+						</Box>
+					</TabPanel>
+					<TabPanel>
+						<Box borderWidth="1px" p={4}>
+							<SimpleGrid columns={2} spacing={5} minChildWidth="200px" pr={20}>
+								<Text fontSize="2xl">Request</Text>
+								<Text fontSize="xl" as="samp">
+									/api/comingsoon/:id
+								</Text>
+								<Text fontSize="2xl">Response</Text>
+								<ComingSoon />
 							</SimpleGrid>
 						</Box>
 					</TabPanel>
