@@ -1,4 +1,5 @@
 import { Box, Heading, Text, Button, SimpleGrid } from '@chakra-ui/core';
+import Link from 'next/link';
 
 const Hero = () => (
 	<>
@@ -13,17 +14,19 @@ const Hero = () => (
 					all the building blocks you need to build, integrate, mock and test
 					your applications.
 				</Text>
-				<Button
-					size="lg"
-					variant="solid"
-					mt={5}
-					fontWeight="medium"
-					borderRadius="6px"
-					boxShadow="lg"
-					variantColor="teal"
-				>
-					Get Started
-				</Button>
+				<Link href="/docs">
+					<Button
+						size="lg"
+						variant="solid"
+						mt={5}
+						fontWeight="medium"
+						borderRadius="6px"
+						boxShadow="lg"
+						variantColor="teal"
+					>
+						Get Started
+					</Button>
+				</Link>
 			</Box>
 		</SimpleGrid>
 	</>
