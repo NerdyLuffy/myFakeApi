@@ -78,7 +78,7 @@ const Cars = () => (
 					<Box ml="3">
 						<Text fontWeight="bold">
 							Angad Gupta
-							<Badge ml="1" variantColor="pink">
+							<Badge ml="1" variantColor="teal">
 								Core Contributor
 							</Badge>
 						</Text>
