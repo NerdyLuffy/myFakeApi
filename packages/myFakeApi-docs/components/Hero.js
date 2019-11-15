@@ -14,7 +14,7 @@ const Hero = () => (
 					all the building blocks you need to build, integrate, mock and test
 					your applications.
 				</Text>
-				<Link href="/docs">
+				{/* <Link href="/docs">
 					<Button
 						size="lg"
 						variant="solid"
@@ -26,7 +26,7 @@ const Hero = () => (
 					>
 						Get Started
 					</Button>
-				</Link>
+				</Link> */}
 			</Box>
 		</SimpleGrid>
 	</>

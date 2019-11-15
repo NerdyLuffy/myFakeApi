@@ -1,7 +1,5 @@
 import { Box, SimpleGrid, IconButton, useColorMode } from '@chakra-ui/core';
 
-import SideNav from '../components/SideNav';
-
 function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (

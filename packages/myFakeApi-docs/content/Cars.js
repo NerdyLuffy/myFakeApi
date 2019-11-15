@@ -7,7 +7,6 @@ import {
 	Flex,
 	Avatar,
 	AvatarBadge,
-	Stack,
 	Badge
 } from '@chakra-ui/core';
 
@@ -82,10 +81,7 @@ const Cars = () => (
 								Core Contributor
 							</Badge>
 						</Text>
-						<Text fontSize="sm">
-							Last modified on {new Date().getUTCDate()}/{new Date().getMonth()}
-							/{new Date().getFullYear()}
-						</Text>
+						<Text fontSize="sm"></Text>
 					</Box>
 				</Flex>
 				<Flex>

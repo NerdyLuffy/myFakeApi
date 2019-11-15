@@ -1,17 +1,6 @@
-import {
-	CSSReset,
-	ThemeProvider,
-	ColorModeProvider,
-	Box,
-	Heading,
-	Text,
-	Button,
-	SimpleGrid
-} from '@chakra-ui/core';
+import { CSSReset, ThemeProvider, ColorModeProvider } from '@chakra-ui/core';
 import Navbar from '../components/Navbar';
-
 import Cars from '../content/Cars';
-import SideNav from '../components/SideNav';
 
 const docs = () => (
 	<>
@@ -19,7 +8,6 @@ const docs = () => (
 			<ColorModeProvider>
 				<CSSReset />
 				<Navbar />
-				<SideNav />
 				<Cars />
 			</ColorModeProvider>
 		</ThemeProvider>
