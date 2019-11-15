@@ -28,7 +28,7 @@ const QuickDocs = () => (
 				<TabList mb="1em">
 					<Tab>List Single Car</Tab>
 					<Tab>List All Cars</Tab>
-					<Tab>More Coming Soon</Tab>
+					<Tab>More Coming Soon 🚀</Tab>
 				</TabList>
 				<TabPanels>
 					<TabPanel>

@@ -1,7 +1,7 @@
 import { Box, Text, Link } from '@chakra-ui/core';
 
 const Footer = props => (
-	<Box textAlign="center" pt="12" pb="4" fontSize="md">
+	<Box textAlign="center" pt="12" pb="8" fontSize="md">
 		<Text>
 			Proudly made in{' '}
 			<span aria-label="Australia" role="img">
