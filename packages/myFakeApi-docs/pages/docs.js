@@ -1,21 +1,17 @@
 import { CSSReset, ThemeProvider, ColorModeProvider } from '@chakra-ui/core';
 import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import QuickDocs from '../components/QuickDocs';
-import Footer from '../components/Footer';
+import ApiDocs from '../components/ApiDocs';
 
-const Index = () => (
+const docs = () => (
 	<div>
 		<ThemeProvider>
 			<ColorModeProvider>
 				<CSSReset />
 				<Navbar />
-				<Hero />
-				<QuickDocs />
-				<Footer />
+				<ApiDocs />
 			</ColorModeProvider>
 		</ThemeProvider>
 	</div>
 );
 
-export default Index;
+export default docs;
