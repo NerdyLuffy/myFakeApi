@@ -1,17 +1,17 @@
 import { CSSReset, ThemeProvider, ColorModeProvider } from '@chakra-ui/core';
 import Navbar from '../components/Navbar';
-import Cars from '../content/Cars';
+import ApiDocs from '../components/ApiDocs';
 
 const docs = () => (
-	<>
+	<div>
 		<ThemeProvider>
 			<ColorModeProvider>
 				<CSSReset />
 				<Navbar />
-				<Cars />
+				<ApiDocs />
 			</ColorModeProvider>
 		</ThemeProvider>
-	</>
+	</div>
 );
 
 export default docs;

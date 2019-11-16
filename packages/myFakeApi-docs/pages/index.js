@@ -5,7 +5,7 @@ import QuickDocs from '../components/QuickDocs';
 import Footer from '../components/Footer';
 
 const Index = () => (
-	<>
+	<div>
 		<ThemeProvider>
 			<ColorModeProvider>
 				<CSSReset />
@@ -15,7 +15,7 @@ const Index = () => (
 				<Footer />
 			</ColorModeProvider>
 		</ThemeProvider>
-	</>
+	</div>
 );
 
 export default Index;

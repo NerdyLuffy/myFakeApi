@@ -10,9 +10,9 @@ import {
 	Tab,
 	TabPanel
 } from '@chakra-ui/core';
-import Car from '../codeblock/Car.mdx';
-import Cars from '../codeblock/Cars.mdx';
-import ComingSoon from '../codeblock/ComingSoon.mdx';
+import Car from '../components/codeblock/Car.mdx';
+import Cars from '../components//codeblock/Cars.mdx';
+import ComingSoon from '../components/codeblock/ComingSoon.mdx';
 
 const QuickDocs = () => (
 	<>
@@ -21,14 +21,21 @@ const QuickDocs = () => (
 				Get Started
 			</Heading>
 			<Text mt={5} pb={10} fontSize="2xl">
-				Start mocking using our ready to use restful endpoints.
+				Start mocking using our ready to use restful API. No registration,
+				tokens or keys required.
 			</Text>
 
-			<Tabs isFitted variant="enclosed">
+			<Tabs isFitted variant="line">
 				<TabList mb="1em">
-					<Tab>List Single Car</Tab>
-					<Tab>List All Cars</Tab>
-					<Tab>More Coming Soon 🚀</Tab>
+					<Tab fontSize="lg" fontWeight="medium">
+						List Single Car
+					</Tab>
+					<Tab fontSize="lg" fontWeight="medium">
+						List All Cars
+					</Tab>
+					<Tab fontSize="lg" fontWeight="medium">
+						More Coming Soon 🚀
+					</Tab>
 				</TabList>
 				<TabPanels>
 					<TabPanel>

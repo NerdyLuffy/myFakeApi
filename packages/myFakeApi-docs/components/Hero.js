@@ -9,10 +9,9 @@ const Hero = () => (
 					My Fake API ⚡️
 				</Heading>
 				<Text mt={5} fontSize="2xl">
-					Build truely accessible web applications with speed and precision
-					using our modular and accessible API mocking library that gives you
-					all the building blocks you need to build, integrate, mock and test
-					your applications.
+					Kickstart new applications at light speed using our modular and free
+					to use API mocking service that gives you all the essential endpoints
+					you would require to scaffold, mock and test your applications.
 				</Text>
 				{/* <Link href="/docs">
 					<Button
