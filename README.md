@@ -4,14 +4,14 @@ Kickstart new applications at light speed using our modular and free to use API 
 
 # Installation
 
-## Backend
+### Backend
 
 ```
 $ yarn 
 $ yarn start
 ```
 
-## Frontend
+### Frontend
 
 ```
 $ yarn 
