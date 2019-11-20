@@ -18,17 +18,17 @@ $ yarn
 $ yarn dev
 ```
 
-# Contributors
+# Core Contributors
 
-- Angad Gupta 
-- Yash Karamchandani 
+- Angad Gupta ([@angad777](https://github.com/angad777)) 
+- Yash Karamchandani ([@nerdyluffy](https://github.com/NerdyLuffy))
 
 # How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
 # License
 
-See the licence [license].
+See the [license].
 
 [license]: /LICENSE
 [contributing]: /CONTRIBUTING.md
