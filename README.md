@@ -23,6 +23,12 @@ $ yarn dev
 - Angad Gupta 
 - Yash Karamchandani 
 
+# How to contribute
+Have an idea? Found a bug? See [how to contribute][contributing].
+
 # License
 
+See the licence [license]: /LICENSE
+
 [license]: /LICENSE
+[contributing]: /CONTRIBUTING.md
