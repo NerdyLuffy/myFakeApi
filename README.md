@@ -28,7 +28,7 @@ Have an idea? Found a bug? See [how to contribute][contributing].
 
 # License
 
-See the licence [license]: /LICENSE
+See the licence [license].
 
 [license]: /LICENSE
 [contributing]: /CONTRIBUTING.md
