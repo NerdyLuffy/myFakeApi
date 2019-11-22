@@ -21,9 +21,9 @@ const usersRoutes = require('../routes/users/users.js');
 
 app.all("/api/*", [
   (req, res, next) => {
-		let delay = req.body.delay || 0;
-		_.delay(() => {
-			return next();
+			let delay = req.body.delay || 0;
+			_.delay(() => {
+				return next();
 		},delay);
   }
 ]);

@@ -23,6 +23,7 @@ loginInRoutes.post('/', validation, async(req,res,next) => {
 		}
 		let session = await token.genToken(playload);
 		res.status(200).json({
+			"userDetails": req.body,
 			session
 		});
 	}

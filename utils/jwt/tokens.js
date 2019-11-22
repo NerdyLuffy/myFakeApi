@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
-let secretKey = 'wSX#fUo7rVzSZD';
+let secretKey = process.env.SECRET_KEY;
 
 module.exports = {
 	genToken,
