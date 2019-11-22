@@ -1,4 +1,6 @@
 import {
+	Code,
+	Stack,
 	Heading,
 	Text,
 	SimpleGrid,
@@ -7,7 +9,7 @@ import {
 	Flex,
 	Avatar,
 	AvatarBadge,
-	Badge
+	Badge,
 } from '@chakra-ui/core';
 
 const Cars = () => (
@@ -16,23 +18,15 @@ const Cars = () => (
 			<Box pl={20} pr={20} pb={20}>
 				<Box pb={5}>
 					<Heading as="h1" size="xl">
-						Getting Started
+						Guide
 					</Heading>
 				</Box>
 				<Text fontSize="lg">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-					aperiam modi eum quam, cupiditate nesciunt corrupti cumque iste iusto
-					nam consequuntur nulla incidunt aliquid similique laboriosam.
-					Consequatur, nemo. Nisi, repellendus sed? Alias accusantium tempora
-					ducimus iure maxime delectus architecto dignissimos quos doloribus
-					libero facere, ipsum eaque. Labore cum recusandae quides expedita
-					officia ipsa, odit optio temporibus eos eligendi? Exercitationem autem
-					dolores quae natus quo incidunt minima sit magni possimus? In rerum
-					quod, illo eveniet vitae provident nisi mollitia ducimus
-					necessitatibus amet. Id, voluptatibus. Ratione iste ipsum libero quam
-					corporis quisquam excepturi? Rerum vero quia et, minus iusto unde
-					autem repellat!
+					List all users
 				</Text>
+				<Stack isInline>
+					<Code variantColor="red" children="fetch('https://myfakeapi.com//api/users').then(response => response.json()).then(json => console.log(json))" />
+				</Stack>
 				<Box pb={5} pt={5}>
 					<Heading>Mocking an API</Heading>
 				</Box>
