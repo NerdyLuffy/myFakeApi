@@ -1,5 +1,9 @@
 {
+	"name": "myfakeapi",
 	"version": 2,
+	"env":{
+		"secretKey":"@secretKey"
+	},
 	"builds": [
 		{ "src": "index.js", "use": "@now/node-server" },
 		{
