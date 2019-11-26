@@ -1,4 +1,10 @@
-import { Box, SimpleGrid, IconButton, useColorMode } from '@chakra-ui/core';
+import {
+	Box,
+	SimpleGrid,
+	IconButton,
+	useColorMode,
+	Tooltip
+} from '@chakra-ui/core';
 
 function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -16,20 +22,25 @@ function Navbar() {
 			<Box height="65px"></Box>
 			<Box height="65px"></Box>
 			<Box height="65px" p={3}>
-				<IconButton
-					aria-label={`Switch to ${
-						colorMode === 'light' ? 'dark' : 'light'
-					} mode`}
-					variant="ghost"
-					color="current"
-					ml="2"
-					fontSize="20px"
-					onClick={toggleColorMode}
-					icon={colorMode === 'light' ? 'moon' : 'sun'}
-					variantColor="teal"
-					isRound="true"
-					size="lg"
-				/>
+				<Tooltip
+					label={`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`}
+					placement="left"
+				>
+					<IconButton
+						aria-label={`Switch to ${
+							colorMode === 'light' ? 'dark' : 'light'
+						} mode`}
+						variant="ghost"
+						color="current"
+						ml="2"
+						fontSize="20px"
+						onClick={toggleColorMode}
+						icon={colorMode === 'light' ? 'moon' : 'sun'}
+						variantColor="teal"
+						isRound="true"
+						size="lg"
+					/>
+				</Tooltip>
 			</Box>
 		</SimpleGrid>
 	);
