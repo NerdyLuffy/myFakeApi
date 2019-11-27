@@ -30,10 +30,7 @@ async function loginValidations(req,res,next)
 		}
 		else
 		{
-			let delay = req.body.delay || 0;
-			_.delay( () =>  {
-				return next();
-			}, delay);
+			return next();
 		}
 	}
 }
