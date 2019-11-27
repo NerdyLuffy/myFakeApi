@@ -2,12 +2,15 @@ import { Box, Text, Link } from '@chakra-ui/core';
 
 const Footer = () => (
 	<>
-		<Box textAlign="center" pt="12" pb="8" fontSize="md">
+		<Box textAlign="center" pt={5} pb={5} fontSize="md">
+			<Box pb={5}>
+				<hr />
+			</Box>
 			<Text>
 				Proudly made in{' '}
 				<span aria-label="Australia" role="img">
 					🇦🇺
-				</span>{' '}
+				</span>
 			</Text>
 			<Text>Released under the MIT License.</Text>
 			<Text>
@@ -15,7 +18,7 @@ const Footer = () => (
 				<Link
 					color="teal.500"
 					href="https://github.com/angad777"
-					target="__blank"
+					target="_blank"
 				>
 					angad777
 				</Link>{' '}
@@ -23,7 +26,7 @@ const Footer = () => (
 				<Link
 					color="teal.500"
 					href="https://github.com/nerdyluffy"
-					target="__blank"
+					target="_blank"
 				>
 					nerdyluffy
 				</Link>

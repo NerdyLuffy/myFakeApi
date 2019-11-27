@@ -13,19 +13,6 @@ const Hero = () => (
 					to use API mocking service that gives you all the essential endpoints
 					you would require to scaffold, mock and test your applications.
 				</Text>
-				{/* <Link href="/docs">
-					<Button
-						size="lg"
-						variant="solid"
-						mt={5}
-						fontWeight="medium"
-						borderRadius="6px"
-						boxShadow="lg"
-						variantColor="teal"
-					>
-						Get Started
-					</Button>
-				</Link> */}
 			</Box>
 		</SimpleGrid>
 	</>

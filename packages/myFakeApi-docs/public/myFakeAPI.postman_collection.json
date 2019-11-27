@@ -1,0 +1,1039 @@
+{
+	"info": {
+		"_postman_id": "5e875714-fbe5-452d-a5a5-1a8756f0cb6c",
+		"name": "myFakeAPI",
+		"description": "Kickstart your new applications at light speed using our modular and free to use API mocking service that gives you all the essential endpoints you would require to scaffold, mock and test your applications. No registration, tokens or keys required.\n\nWebsite: https://myfakeapi.com\nGithub: https://github.com/NerdyLuffy/myFakeApi \n\nNote: Don't forget to star our repo and help us spread the word \n\n\nMade with <3 and Coffee :P ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "https://myfakeapi.com/api/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbmcxIiwiZW1haWwiOiJ5YXNoc2tAcHJvdG9ubWFpbC5jb20iLCJmaXJzdE5hbWUiOiJsdWZmeSIsImlhdCI6MTU3MzUxMjM5MCwiZXhwIjoxNTczNTU1NTkwfQ.ZkZCNPYaIycEGi7HivI5iftI_6vcwQhdwCdYwZDDhJQ",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "id",
+								"value": "5dc9e4c6bd60e8244776045d",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"luffy\",\n\t\"lastName\":\"Monkey\",\n\t\"message\":\"One Piece\",\n\t\"mobile\": 123456,\n\t\"country\":\"Japan\",\n\t\"edm\": false\n}"
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/signup",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"signup"
+							]
+						},
+						"description": "Sign Up API - Use the following API to sign up a user in your Application. Please note the response is faked and no actual user will be created on the server. \n\n\nIn the response we will send back all the values that was sent during the post request \n\nPlease send data in the body in Json format :\n\n{\n\t\"firstName\": String | Required,\n\t\"lastName\": String | Required ,\n\t\"mobile\": Number | Required,\n\t\"country\": String | Required,\n\t\"edm\": Boolean | optional\n}\n\nYou can add any number of fields in the body. Validation rule only applies to first 4 fields."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbmcxIiwiZW1haWwiOiJ5YXNoc2tAcHJvdG9ubWFpbC5jb20iLCJmaXJzdE5hbWUiOiJsdWZmeSIsImlhdCI6MTU3MzUxMjM5MCwiZXhwIjoxNTczNTU1NTkwfQ.ZkZCNPYaIycEGi7HivI5iftI_6vcwQhdwCdYwZDDhJQ",
+								"disabled": true
+							},
+							{
+								"key": "id",
+								"type": "text",
+								"value": "5dc9e4c6bd60e8244776045d",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userName\":\"John Wick\",\n\t\"password\" :\"Jardani\",\n\t\"verified\" : true,\n\t\"blocked\": false,\n\t\"delay\": 20\n\t\n}"
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/login",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						},
+						"description": "Login API - Use the following API to loging the user in your application \n\nIn the response we will send back all the values that was sent during the post request\n\nPlease send data in the body in Json format :\n\n{\n\t\"userName\": String | Required,\n\t\"password\" :String | Required,\n\t\"verified\" : Boolean | Required | if false it will return error,\n\t\"blocked\": Boolean | Optional | if true it will return error,\n\t\"delay\": Number | Optional | Add number to deploy the response\n\t\n}\n\nNote: Validation Rule only applies to first two fields. In the response we will send back Session Token as well which can be stored on the user side as cookie.\n\nPS: You can use our Session API to verify the session of the users"
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/session",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkpvaG4gV2ljayIsInBhc3N3b3JkIjoiSmFyZGFuaSIsIndlYnNpdGUiOiJ3d3cubXlmYWtlYXBpLmNvbSIsImlhdCI6MTU3NDgyMjMxNiwiZXhwIjoxNTc0ODI0MTE2fQ.UxTH-6sU4i05FXaLUeinlXdex0t7khX4D9nEPw8hUWw\"\n}"
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/session",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"session"
+							]
+						},
+						"description": "Session API - Check the session of the user \n\nPlease send data in the body in Json format :\n\n{\n\t\"token\": String | Token Value\n}\n\nif the session is still valid we will sent back user info or else error message"
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/contactus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbmcxIiwiZW1haWwiOiJ5YXNoc2tAcHJvdG9ubWFpbC5jb20iLCJmaXJzdE5hbWUiOiJsdWZmeSIsImlhdCI6MTU3MzUxMjM5MCwiZXhwIjoxNTczNTU1NTkwfQ.ZkZCNPYaIycEGi7HivI5iftI_6vcwQhdwCdYwZDDhJQ",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "5dc9e4c6bd60e8244776045d",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"John\",\n\t\"lastName\":\"Wick\",\n\t\"message\":\"I am coming for you !!!!\",\n\t\"contact\": 123456789\n\t\n}"
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/contactus",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"contactus"
+							]
+						},
+						"description": "Contact Us API - Use the following API to for any contact us form in your application \n\nPlease sending the following fields in the body in Json:\n\n{\n\t\"firstName\": String | Required,\n\t\"lastName\": String | Required,\n\t\"message\": String | Required,\n\t\"contact\": Number | Required\n\t\n}\n\nYou can add any additional fields, but validation will only be applied to above mentioned fields."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "https://myfakeapi.com/api/cars/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbmcxIiwiZW1haWwiOiJ5YXNoc2tAcHJvdG9ubWFpbC5jb20iLCJmaXJzdE5hbWUiOiJsdWZmeSIsImlhdCI6MTU3MzUxMjM5MCwiZXhwIjoxNTczNTU1NTkwfQ.ZkZCNPYaIycEGi7HivI5iftI_6vcwQhdwCdYwZDDhJQ",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "id",
+								"value": "5dc9e4c6bd60e8244776045d",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "name",
+								"value": "Mitsubishi",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "model",
+								"value": "Montero",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFzIiwicGFzc3dvcmQiOiIxMjMiLCJ3ZWJzaXRlIjoid3d3Lm15ZmFrZWFwaS5jb20iLCJpYXQiOjE1NzM1NDMzNjcsImV4cCI6MTU3MzU0NTE2N30.95fFJcUIOsTVLrTNxSVdk4loPQnwWx9tBGJIb19o65\"\n\t\n}"
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/cars/",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars",
+								""
+							]
+						},
+						"description": "The Following API will return 1000 Cars and there information \n\nNote: Its a moke Data and it does not match to any Cars in real world scenario. "
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/cars/{ID}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/cars/1",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars",
+								"1"
+							]
+						},
+						"description": "Get Car by ID. The follwoing API will return the information of the individual Car in the response \n\nID is required while making call to the API "
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/cars/name/{NAME}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/cars/name/Mitsubishi",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars",
+								"name",
+								"Mitsubishi"
+							]
+						},
+						"description": "Get all Cars by Name. The following API will return all the Cars with the matching name \n\nNote: The name of the Cars are case sensitive."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/cars/model/{MODEL}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/cars/model/Montero",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars",
+								"model",
+								"Montero"
+							]
+						},
+						"description": "Get all Cars by Model. The following API will return all the Cars with the matching model \n\nNote: The Model of the Cars are case sensitive."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/cars/color/{COLOR}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/cars/color/Blue",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars",
+								"color",
+								"Blue"
+							]
+						},
+						"description": "Get all Cars by Color. The following API will return all the Cars with the matching color name. \n\nNote: The Color of the Cars are case sensitive."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/cars/year/{YEAR}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/cars/year/1991",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars",
+								"year",
+								"1991"
+							]
+						},
+						"description": "Get all Cars by Year. The following API will return all the Cars with the matching year."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/cars/year/{YEAR}?q=lt",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbmcxIiwiZW1haWwiOiJ5YXNoc2tAcHJvdG9ubWFpbC5jb20iLCJmaXJzdE5hbWUiOiJsdWZmeSIsImlhdCI6MTU3MzUxMjM5MCwiZXhwIjoxNTczNTU1NTkwfQ.ZkZCNPYaIycEGi7HivI5iftI_6vcwQhdwCdYwZDDhJQ",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "id",
+								"value": "5dc9e4c6bd60e8244776045d",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "name",
+								"value": "Mitsubishi",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "model",
+								"value": "Montero",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFzIiwicGFzc3dvcmQiOiIxMjMiLCJ3ZWJzaXRlIjoid3d3Lm15ZmFrZWFwaS5jb20iLCJpYXQiOjE1NzM1NDMzNjcsImV4cCI6MTU3MzU0NTE2N30.95fFJcUIOsTVLrTNxSVdk4loPQnwWx9tBGJIb19o65\"\n\t\n}"
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/cars/year/2012?q=lt",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars",
+								"year",
+								"2012"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "lt"
+								}
+							]
+						},
+						"description": "Get all Cars by Year. The following API will return all the Cars whose year is less than {YEAR}"
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/cars/year/{YEAR}?q=gt",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbmcxIiwiZW1haWwiOiJ5YXNoc2tAcHJvdG9ubWFpbC5jb20iLCJmaXJzdE5hbWUiOiJsdWZmeSIsImlhdCI6MTU3MzUxMjM5MCwiZXhwIjoxNTczNTU1NTkwfQ.ZkZCNPYaIycEGi7HivI5iftI_6vcwQhdwCdYwZDDhJQ",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "id",
+								"value": "5dc9e4c6bd60e8244776045d",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "name",
+								"value": "Mitsubishi",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "model",
+								"value": "Montero",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFzIiwicGFzc3dvcmQiOiIxMjMiLCJ3ZWJzaXRlIjoid3d3Lm15ZmFrZWFwaS5jb20iLCJpYXQiOjE1NzM1NDMzNjcsImV4cCI6MTU3MzU0NTE2N30.95fFJcUIOsTVLrTNxSVdk4loPQnwWx9tBGJIb19o65\"\n\t\n}"
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/cars/year/2012?q=gt",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars",
+								"year",
+								"2012"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "gt"
+								}
+							]
+						},
+						"description": "Get all Cars by Year. The following API will return all the Cars whose year is greater than {YEAR}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "https://myfakeapi.com/api/users/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/users/",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						},
+						"description": "Get all Users. The following API will return all 1000 users and there information \n\nNOTE: All the data was generated randomly but if you think it points to real person please contact us and well remove that ASAP\n\nWe will not be responsible for any liabilities regarding the same.Please a good read of licence in our github repo "
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/users/{ID}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/users/1",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						},
+						"description": "Get user by ID. The follwoing API will return all the information about individual user."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/users/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbmcxIiwiZW1haWwiOiJ5YXNoc2tAcHJvdG9ubWFpbC5jb20iLCJmaXJzdE5hbWUiOiJsdWZmeSIsImlhdCI6MTU3MzUxMjM5MCwiZXhwIjoxNTczNTU1NTkwfQ.ZkZCNPYaIycEGi7HivI5iftI_6vcwQhdwCdYwZDDhJQ",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "id",
+								"value": "5dc9e4c6bd60e8244776045d",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "name",
+								"value": "Mitsubishi",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "model",
+								"value": "Montero",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 25,\n\t\"address\": [\n            {\n                \"street\": \"4973 Green Way\",\n                \"street_name\": \"Hermina\",\n                \"city\": \"Corona\",\n                \"state\": \"California\",\n                \"country\": \"United States\",\n                \"country_code\": \"US\",\n                \"postal_code\": \"92878\"\n            }\n        ],\n        \"phone\": \"+48 (803) 182-9995\"\n\t\n}"
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/users/",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						},
+						"description": "The following API will add new user \n\nNOTE: The response is faked and no actual user will be created on the server."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Football 2018",
+			"item": [
+				{
+					"name": "https://myfakeapi.com/api/football",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football"
+							]
+						},
+						"description": "Get all the information !!!!"
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/stadiums",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/stadiums",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"stadiums"
+							]
+						},
+						"description": "Get all the Stadiums"
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/stadiums/{ID}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/stadiums/1",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"stadiums",
+								"1"
+							]
+						},
+						"description": "Get all the information of an individual Stadium."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/stadiums/name/{NAME}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/stadiums/name/Luzhniki Stadium",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"stadiums",
+								"name",
+								"Luzhniki Stadium"
+							]
+						},
+						"description": "Get all the informatin of the Stadium by name.\n\nNOTE: The name of the Stadiums are case sensitive."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/tvchannels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/tvchannels",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"tvchannels"
+							]
+						},
+						"description": "Get all the Tv Channels for Football Matches. "
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/tvchannels/{ID}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/tvchannels/1",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"tvchannels",
+								"1"
+							]
+						},
+						"description": "Get all the information for an individual Channel."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/tvchannels/name/{NAME}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/tvchannels/name/DR1",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"tvchannels",
+								"name",
+								"DR1"
+							]
+						},
+						"description": "Get all the information about the Tv Channel using the name.\n\nNOTE: The name of the Tv Channels are case sensitive."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/teams",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"teams"
+							]
+						},
+						"description": "Get all the information about Football Teams."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/teams/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/teams/1",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"teams",
+								"1"
+							]
+						},
+						"description": "Get all the information about an individual Team using an ID"
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/teams/name/{NAME}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/teams/name/Russia",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"teams",
+								"name",
+								"Russia"
+							]
+						},
+						"description": "Get all the information about an individual Team using name \n\nNOTE: The name of the team are case sensitive."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/teams/fifaCode/{CODE}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/teams/fifaCode/RUS",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"teams",
+								"fifaCode",
+								"RUS"
+							]
+						},
+						"description": "Get all the information about an individual Team using fifa code\nNOTE: The code of the team are case sensitive."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/groups",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"groups"
+							]
+						},
+						"description": "Get all the information about groups"
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/groups/{GROUP}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/groups/a",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"groups",
+								"a"
+							]
+						},
+						"description": "Get all the information about individual Group."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/knockouts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/knockouts",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"knockouts"
+							]
+						},
+						"description": "Get all the information about knockouts."
+					},
+					"response": []
+				},
+				{
+					"name": "https://myfakeapi.com/api/football/knockouts/{ROUND}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://myfakeapi.com/api/football/knockouts/round_16",
+							"protocol": "https",
+							"host": [
+								"myfakeapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"football",
+								"knockouts",
+								"round_16"
+							]
+						},
+						"description": "Get all the information about an individual round."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "c9330827-0212-4e0f-80b8-bcb896878153",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}

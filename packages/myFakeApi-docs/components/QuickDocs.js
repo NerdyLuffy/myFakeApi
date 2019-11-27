@@ -21,8 +21,8 @@ const QuickDocs = () => (
 				Get Started
 			</Heading>
 			<Text mt={5} pb={10} fontSize="2xl">
-				Start mocking using our ready to use restful API. No registration,
-				tokens or keys required.
+				MyFakeAPI is a free online REST API that you can use whenever you need
+				some fake data. No registration, tokens or keys required.
 			</Text>
 
 			<Tabs isFitted variant="line">
