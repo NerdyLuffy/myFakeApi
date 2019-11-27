@@ -1,9 +1,8 @@
 import {
 	Box,
 	Heading,
-	Badge,
-	Text,
 	SimpleGrid,
+	Text,
 	Tabs,
 	TabList,
 	TabPanels,
@@ -11,7 +10,7 @@ import {
 	TabPanel
 } from '@chakra-ui/core';
 import Car from '../components/codeblock/Car.mdx';
-import Cars from '../components//codeblock/Cars.mdx';
+import Cars from '../components/codeblock/Cars.mdx';
 import ComingSoon from '../components/codeblock/ComingSoon.mdx';
 
 const QuickDocs = () => (
