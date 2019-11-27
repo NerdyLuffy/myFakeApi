@@ -1,36 +1,38 @@
 import {
+	Box,
+	Heading,
 	Stat,
 	StatLabel,
 	StatNumber,
 	StatHelpText,
 	StatArrow,
 	StatGroup,
-	Heading,
-	Box
+	Text
 } from '@chakra-ui/core';
 
 const Stats = () => (
 	<>
 		<Box pt={0}>
-			<Heading size="lg" fontSize="55px" as="h1" mb={5}>
+			<Heading size="lg" fontSize="55px" as="h1">
 				Statistics
 			</Heading>
+			<Text fontSize="lg" py={5}>
+				Real time statistics to view our API availability.
+			</Text>
 			<StatGroup>
 				<Stat>
 					<StatLabel fontSize="lg">API Requests</StatLabel>
-					<StatNumber>345,670</StatNumber>
+					<StatNumber>Coming Soon</StatNumber>
 					<StatHelpText>
-						<StatArrow type="increase" />
-						53.39%
+						<StatArrow type="increase" />-
 					</StatHelpText>
 				</Stat>
 
 				<Stat>
 					<StatLabel fontSize="lg">API Responses</StatLabel>
-					<StatNumber>385,670</StatNumber>
+					<StatNumber>Coming Soon</StatNumber>
 					<StatHelpText>
-						<StatArrow type="decrease" />
-						2.05%
+						<StatArrow type="decrease" />-
 					</StatHelpText>
 				</Stat>
 			</StatGroup>
