@@ -1,3 +1,4 @@
+import React from 'react';
 import { Flex, PseudoBox } from '@chakra-ui/core';
 
 const Subscribers = () => (

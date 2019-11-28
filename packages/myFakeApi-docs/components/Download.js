@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button, Box, SimpleGrid } from '@chakra-ui/core';
 import Link from 'next/link';
 
