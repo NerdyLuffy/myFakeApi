@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, SimpleGrid } from '@chakra-ui/core';
 import Stats from '../components/Stats';
 import Postman from './Postman';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, Heading, SimpleGrid, Text, Link } from '@chakra-ui/core';
 import Sponsors from './Sponsors';
 
