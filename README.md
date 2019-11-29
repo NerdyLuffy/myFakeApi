@@ -24,10 +24,18 @@ $ yarn dev
 Postman API Documentation: ([Docs](https://documenter.getpostman.com/view/5596891/SW7eyRFV?version=latest))
 
 
-# Core Contributors
+# Authors
 
 - Angad Gupta ([@angad777](https://github.com/angad777)) 
 - Yash Karamchandani ([@nerdyluffy](https://github.com/NerdyLuffy))
+
+# Tech Stack
+
+### Built using :
+
+- [Node](https://github.com/nodejs/node)
+- [Express](https://github.com/expressjs/express)
+- [React](https://github.com/facebook/react)
 
 # How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
