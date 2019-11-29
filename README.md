@@ -1,4 +1,4 @@
-# My Fake API ⚡️
+# My Fake API ⚡️ [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) [![HitCount](http://hits.dwyl.io/NerdyLuffy/myFakeApi.svg)](http://hits.dwyl.io/NerdyLuffy/myFakeApi)
 
 Kickstart new applications at light speed using our modular and free to use API mocking service that gives you all the essential endpoints you would require to scaffold, mock and test your applications.
 
