@@ -14,6 +14,7 @@ function Download() {
 					<Link>
 						<a href="postman://app/collections/import/5596891-5e875714-fbe5-452d-a5a5-1a8756f0cb6c-SW7eyRFV?referrer=https%3A%2F%2Fdocumenter.getpostman.com%2Fview%2F5596891%2FSW7eyRFV%3Fversion%3Dlatest&versionTag=latest#?">
 							<Button
+								width="250px"
 								variantColor="teal"
 								variant="solid"
 								size="lg"
@@ -31,6 +32,7 @@ function Download() {
 							target="_blank"
 						>
 							<Button
+								width="250px"
 								variantColor="teal"
 								variant="outline"
 								size="lg"
