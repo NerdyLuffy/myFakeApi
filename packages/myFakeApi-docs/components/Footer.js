@@ -20,6 +20,7 @@ const Footer = () => (
 					color="teal.500"
 					href="https://github.com/angad777"
 					target="_blank"
+					rel="noopener"
 				>
 					angad777
 				</Link>{' '}
@@ -28,6 +29,7 @@ const Footer = () => (
 					color="teal.500"
 					href="https://github.com/nerdyluffy"
 					target="_blank"
+					rel="noopener"
 				>
 					nerdyluffy
 				</Link>

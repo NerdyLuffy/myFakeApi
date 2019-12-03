@@ -17,6 +17,7 @@ const Contributions = () => (
 							color="teal.500"
 							href="https://github.com/NerdyLuffy/myFakeApi"
 							target="_blank"
+							rel="noopener"
 						>
 							Fork
 						</Link>{' '}
@@ -24,6 +25,7 @@ const Contributions = () => (
 						<Link
 							color="teal.500"
 							href="x-github-client://openRepo/https://github.com/NerdyLuffy/myFakeApi"
+							rel="noopener"
 						>
 							Clone
 						</Link>{' '}
@@ -32,6 +34,7 @@ const Contributions = () => (
 							color="teal.500"
 							href="https://github.com/NerdyLuffy/myFakeApi"
 							target="_blank"
+							rel="noopener"
 						>
 							Github
 						</Link>{' '}
