@@ -11,7 +11,7 @@ const Sponsors = () => (
 			<Text fontSize="lg" pt={5}></Text>
 			<Stack isInline>
 				<Link>
-					<a href="https://erebos.tech" target="_blank">
+					<a href="https://erebos.tech" target="_blank" rel="noopener">
 						<Image
 							rounded="full"
 							size="110px"

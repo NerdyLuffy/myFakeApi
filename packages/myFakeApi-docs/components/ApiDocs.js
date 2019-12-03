@@ -5,14 +5,16 @@ import Postman from './Postman';
 
 const Cars = () => (
 	<>
-		<SimpleGrid minChildWidth="200px" spacing={10} pt={10} pr={10} pl={10}>
-			<Box>
-				<Postman />
-			</Box>
-			<Box>
-				<Stats />
-			</Box>
-		</SimpleGrid>
+		<Box px={[10, 10, 32, 40]} width="full">
+			<SimpleGrid minChildWidth="200px" spacing={10} pt={10}>
+				<Box>
+					<Postman />
+				</Box>
+				<Box>
+					<Stats />
+				</Box>
+			</SimpleGrid>
+		</Box>
 	</>
 );
 
