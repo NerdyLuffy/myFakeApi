@@ -1,8 +1,8 @@
 const _ = require('lodash');
 
-module.exports = singUpValidations;
+module.exports = signUpValidations;
 
-async function singUpValidations(req, res, next) {
+async function signUpValidations(req, res, next) {
 	let errors = [];
 	if (req.body) {
 		if (!_.isString(req.body.firstName)) {
