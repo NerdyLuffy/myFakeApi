@@ -1,6 +1,6 @@
 const express = require('express');
 const signUpRoutes = express.Router();
-const validation = require('../../utils/validations/singUpValidation.js');
+const validation = require('../../utils/validations/signUpValidation.js');
 const moment = require('moment');
 const uuid = require('uuid/v4');
 
