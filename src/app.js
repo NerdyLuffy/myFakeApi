@@ -10,7 +10,7 @@ app.use(bodyparser.json());
 app.use(morgan('dev'));
 
 const signUpRoutes = require('../routes/signUp/signUp.js');
-const loginRoutes = require('../routes/login/logIn.js');
+const loginRoutes = require('../routes/login/login.js');
 const sessionRoutes = require('../routes/session.js');
 const contactUsRoutes = require('../routes/contactUs/contactUs.js');
 const footballRoutes = require('../routes/football/football.js');
