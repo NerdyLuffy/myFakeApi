@@ -1,9 +1,9 @@
 const express = require('express');
-const loginInRoutes = express.Router();
+const loginRoutes = express.Router();
 const token = require('../../utils/jwt/tokens.js');
 const validation = require('../../utils/validations/loginValidation.js');
 
-loginInRoutes.post('/', validation, async (req, res, next) => {
+loginRoutes.post('/', validation, async (req, res, next) => {
 	let blockedStatus = req.body.blocked || false;
 	if (req.body.verified) {
 		if (blockedStatus) {
@@ -31,4 +31,4 @@ loginInRoutes.post('/', validation, async (req, res, next) => {
 	}
 });
 
-module.exports = loginInRoutes;
+module.exports = loginRoutes;

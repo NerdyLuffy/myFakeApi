@@ -11,9 +11,9 @@ app.use(morgan('dev'));
 
 //Routes
 const signUpRoutes = require('../routes/signUp/signUp.js');
-const loginRouter = require('../routes/logIn/logIn.js');
+const loginRoutes = require('../routes/logIn/logIn.js');
 const sessionRoutes = require('../routes/session.js');
-const contactUsRoute = require('../routes/contactUs/contactUs.js');
+const contactUsRoutes = require('../routes/contactUs/contactUs.js');
 const footballRoutes = require('../routes/football/football.js');
 const carRoutes = require('../routes/cars/cars.js');
 const usersRoutes = require('../routes/users/users.js');
@@ -28,9 +28,9 @@ app.all('/api/*', [
 ]);
 
 app.use('/api/signup', signUpRoutes);
-app.use('/api/login', loginRouter);
+app.use('/api/login', loginRoutes);
 app.use('/api/session', sessionRoutes);
-app.use('/api/contactus', contactUsRoute);
+app.use('/api/contactus', contactUsRoutes);
 app.use('/api/football', footballRoutes);
 app.use('/api/cars', carRoutes);
 app.use('/api/users', usersRoutes);

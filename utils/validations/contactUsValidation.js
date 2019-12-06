@@ -8,13 +8,13 @@ async function contactUsValidation(req, res, next) {
 		if (!_.isString(req.body.firstName)) {
 			errors.push({
 				reason: 'firstName',
-				errorMessage: 'firstName is required.'
+				errorMessage: 'First name is required.'
 			});
 		}
 		if (!_.isString(req.body.lastName)) {
 			errors.push({
 				reason: 'lastName',
-				errorMessage: 'lastName is required.'
+				errorMessage: 'Last name is required.'
 			});
 		}
 		if (!_.isString(req.body.message)) {
@@ -26,7 +26,7 @@ async function contactUsValidation(req, res, next) {
 		if (!_.isNumber(req.body.contact)) {
 			errors.push({
 				reason: 'contact',
-				errorMessage: 'Please provide valid Contact number.'
+				errorMessage: 'Please provide valid contact number.'
 			});
 		}
 		if (errors.length > 0) {

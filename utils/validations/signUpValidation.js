@@ -8,13 +8,13 @@ async function signUpValidations(req, res, next) {
 		if (!_.isString(req.body.firstName)) {
 			errors.push({
 				reason: 'firstName',
-				errorMessage: 'firstName is required.'
+				errorMessage: 'First name is required.'
 			});
 		}
 		if (!_.isString(req.body.lastName)) {
 			errors.push({
 				reason: 'lastName',
-				errorMessage: 'lastName is required.'
+				errorMessage: 'Last name is required.'
 			});
 		}
 		if (!_.isString(req.body.country)) {
@@ -26,7 +26,7 @@ async function signUpValidations(req, res, next) {
 		if (!_.isNumber(req.body.mobile)) {
 			errors.push({
 				reason: 'mobile',
-				errorMessage: 'Please provide valid mobile number.'
+				errorMessage: 'Please provide a valid mobile number.'
 			});
 		}
 		if (errors.length > 0) {

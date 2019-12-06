@@ -3,7 +3,7 @@ import { Box, SimpleGrid } from '@chakra-ui/core';
 import Stats from '../components/Stats';
 import Postman from './Postman';
 
-const Cars = () => (
+const ApiDocs = () => (
 	<>
 		<Box px={[10, 10, 32, 40]} width="full">
 			<SimpleGrid minChildWidth="200px" spacing={10} pt={10}>
@@ -18,4 +18,4 @@ const Cars = () => (
 	</>
 );
 
-export default Cars;
+export default ApiDocs;
