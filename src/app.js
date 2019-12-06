@@ -9,7 +9,6 @@ app.use(cors());
 app.use(bodyparser.json());
 app.use(morgan('dev'));
 
-//Routes
 const signUpRoutes = require('../routes/signUp/signUp.js');
 const loginRoutes = require('../routes/login/logIn.js');
 const sessionRoutes = require('../routes/session.js');
