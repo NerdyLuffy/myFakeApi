@@ -1,8 +1,8 @@
 const _ = require('lodash');
 
-module.exports = contactUsValidation;
+module.exports = signUpValidations;
 
-async function contactUsValidation(req, res, next) {
+async function signUpValidations(req, res, next) {
 	let errors = [];
 	if (req.body) {
 		if (!_.isString(req.body.firstName)) {
@@ -17,16 +17,16 @@ async function contactUsValidation(req, res, next) {
 				errorMessage: 'lastName is required.'
 			});
 		}
-		if (!_.isString(req.body.message)) {
+		if (!_.isString(req.body.country)) {
 			errors.push({
-				reason: 'message',
-				errorMessage: 'Message is required.'
+				reason: 'country',
+				errorMessage: 'Country is required.'
 			});
 		}
-		if (!_.isNumber(req.body.contact)) {
+		if (!_.isNumber(req.body.mobile)) {
 			errors.push({
-				reason: 'contact',
-				errorMessage: 'Please provide valid Contact number.'
+				reason: 'mobile',
+				errorMessage: 'Please provide valid mobile number.'
 			});
 		}
 		if (errors.length > 0) {
