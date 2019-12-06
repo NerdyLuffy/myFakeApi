@@ -9,8 +9,8 @@ import {
 	Tab,
 	TabPanel
 } from '@chakra-ui/core';
-import Car from '../components/codeblock/Car.mdx';
-import Cars from '../components/codeblock/Cars.mdx';
+import Car from '../components/CodeBlock/Car.mdx';
+import Cars from '../components/CodeBlock/Cars.mdx';
 
 const QuickDocTabs = () => (
 	<>

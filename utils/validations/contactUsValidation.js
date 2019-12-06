@@ -7,13 +7,13 @@ async function contactUsValidation(req, res, next) {
 	if (req.body) {
 		if (!_.isString(req.body.firstName)) {
 			errors.push({
-				reason: 'firstName',
+				reason: 'First name',
 				errorMessage: 'First name is required.'
 			});
 		}
 		if (!_.isString(req.body.lastName)) {
 			errors.push({
-				reason: 'lastName',
+				reason: 'Last name',
 				errorMessage: 'Last name is required.'
 			});
 		}
