@@ -25,7 +25,7 @@ loginRoutes.post('/', validation, async (req, res, next) => {
 		});
 	} else {
 		res.status(401).json({
-			reason: 'Email Address not verified',
+			reason: 'Email address not verified',
 			errorMessage: 'Please verify your email to activate your account.'
 		});
 	}

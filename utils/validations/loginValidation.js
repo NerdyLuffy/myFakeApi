@@ -7,13 +7,13 @@ async function loginValidations(req, res, next) {
 		let errors = [];
 		if (!_.isString(req.body.userName)) {
 			errors.push({
-				reason: 'userName',
+				reason: 'Username',
 				errorMessage: 'Username is required.'
 			});
 		}
 		if (!_.isString(req.body.password)) {
 			errors.push({
-				reason: 'password',
+				reason: 'Password',
 				errorMessage: 'Password is required.'
 			});
 		}

@@ -6,7 +6,7 @@ const token = require('../utils/jwt/tokens.js');
 sessionRoutes.post('/', async (req, res, next) => {
 	if (_.isNil(req.body.token)) {
 		res.status(400).json({
-			reason: 'jwt Token',
+			reason: 'JWT token',
 			errorMessage: 'JWT token is missing.'
 		});
 	} else {

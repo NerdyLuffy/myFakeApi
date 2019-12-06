@@ -20,8 +20,8 @@ carRoutes.get('/name/:name', async (req, res) => {
 	let name = req.params.name;
 	if (_.isNil(name)) {
 		res.status(400).json({
-			reason: 'name is null or undefined',
-			errorMessage: 'Car Name is required.'
+			reason: 'Car name is null or undefined',
+			errorMessage: 'Car name is required.'
 		});
 	} else {
 		var results = [];
@@ -40,7 +40,7 @@ carRoutes.get('/model/:model', async (req, res) => {
 	let model = req.params.model;
 	if (_.isNil(model)) {
 		res.status(400).json({
-			reason: 'model is null or undefined',
+			reason: 'Model is null or undefined',
 			errorMessage: 'Car model is required.'
 		});
 	} else {
@@ -60,7 +60,7 @@ carRoutes.get('/color/:color', async (req, res) => {
 	let color = req.params.color;
 	if (_.isNil(color)) {
 		res.status(400).json({
-			reason: 'color is null or undefined',
+			reason: 'Color is null or undefined',
 			errorMessage: 'Car color is required.'
 		});
 	} else {
@@ -82,7 +82,7 @@ carRoutes.get('/year/:year', async (req, res) => {
 	let query = Object.values(queryString)[0];
 	if (_.isNil(year)) {
 		res.status(400).json({
-			reason: 'year is null or undefined',
+			reason: 'Year is null or undefined',
 			errorMessage: 'Car year is required.'
 		});
 	} else {

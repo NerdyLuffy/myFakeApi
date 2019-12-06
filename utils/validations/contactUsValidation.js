@@ -19,13 +19,13 @@ async function contactUsValidation(req, res, next) {
 		}
 		if (!_.isString(req.body.message)) {
 			errors.push({
-				reason: 'message',
+				reason: 'Message',
 				errorMessage: 'Message is required.'
 			});
 		}
 		if (!_.isNumber(req.body.contact)) {
 			errors.push({
-				reason: 'contact',
+				reason: 'Contact',
 				errorMessage: 'Please provide valid contact number.'
 			});
 		}
