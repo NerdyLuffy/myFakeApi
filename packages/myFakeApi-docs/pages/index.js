@@ -12,7 +12,7 @@ const Index = () => (
 	<div>
 		<SEO />
 		<ThemeProvider>
-			<ColorModeProvider>
+			<ColorModeProvider value="light">
 				<CSSReset />
 				<Navbar />
 				<Hero />
