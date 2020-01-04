@@ -11,9 +11,21 @@ carRoutes.get('/', async (req, res) => {
 
 carRoutes.get('/:id', async (req, res) => {
 	let carId = req.params.id;
-	res.status(200).json({
-		Car: carData.find(car => car.id == carId)
-	});
+	let car = carData.find(car => car.id == carId);
+	if(car) {
+		res.status(200).json({
+			Car: car
+		});
+	}
+	else {
+		res.status(400).json({
+			reason: 'Invalid ID',
+			errorMessage: 'Please provide a Valid ID.',
+			hint: 'Get /api/cars/ to see all the vaild ID of the cars'
+		});
+	}
+
+	
 });
 
 carRoutes.get('/name/:name', async (req, res) => {
@@ -30,9 +42,19 @@ carRoutes.get('/name/:name', async (req, res) => {
 				results.push(carData[i]);
 			}
 		}
-		res.status(200).json({
-			Cars: results
-		});
+		if(results.length > 0) {
+			res.status(200).json({
+				Cars: results
+			});
+		}
+		else {
+			res.status(400).json({
+				reason: 'Invalid ID',
+				errorMessage: 'Please provide a Valid ID.',
+				hint: 'Get /api/cars/ to see all the vaild ID of the cars'
+			});
+		}
+		
 	}
 });
 
@@ -50,9 +72,18 @@ carRoutes.get('/model/:model', async (req, res) => {
 				results.push(carData[i]);
 			}
 		}
-		res.status(200).json({
-			Cars: results
-		});
+		if(results.length > 0) {
+			res.status(200).json({
+				Cars: results
+			});
+		}
+		else {
+			res.status(400).json({
+				reason: 'Invalid ID',
+				errorMessage: 'Please provide a Valid ID.',
+				hint: 'Get /api/cars/ to see all the vaild ID of the cars'
+			});
+		}
 	}
 });
 
@@ -70,9 +101,18 @@ carRoutes.get('/color/:color', async (req, res) => {
 				results.push(carData[i]);
 			}
 		}
-		res.status(200).json({
-			Cars: results
-		});
+		if(results.length > 0) {
+			res.status(200).json({
+				Cars: results
+			});
+		}
+		else {
+			res.status(400).json({
+				reason: 'Invalid ID',
+				errorMessage: 'Please provide a Valid ID.',
+				hint: 'Get /api/cars/ to see all the vaild ID of the cars'
+			});
+		}
 	}
 });
 
@@ -102,9 +142,18 @@ carRoutes.get('/year/:year', async (req, res) => {
 				}
 			}
 		}
-		res.status(200).json({
-			Cars: results
-		});
+		if(results.length > 0) {
+			res.status(200).json({
+				Cars: results
+			});
+		}
+		else {
+			res.status(400).json({
+				reason: 'Invalid ID',
+				errorMessage: 'Please provide a Valid ID.',
+				hint: 'Get /api/cars/ to see all the vaild ID of the cars'
+			});
+		}
 	}
 });
 
