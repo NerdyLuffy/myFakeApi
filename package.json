@@ -4,7 +4,7 @@
 	"description": "Fake API for Developers",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "mocha || true",
 		"start": "nodemon index.js"
 	},
 	"repository": {
@@ -27,6 +27,7 @@
 	"homepage": "https://github.com/NerdyLuffy/myFakeApi#readme",
 	"dependencies": {
 		"body-parser": "^1.19.0",
+		"chai-http": "^4.3.0",
 		"cors": "^2.8.5",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
@@ -37,5 +38,9 @@
 		"morgan": "^1.9.1",
 		"nodemon": "^1.19.4",
 		"uuid": "^3.3.3"
+	},
+	"devDependencies": {
+		"chai": "^4.2.0",
+		"mocha": "^6.2.2"
 	}
 }
